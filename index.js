@@ -1,10 +1,10 @@
 // Your code here
 function createEmployeeRecord(employeeList){
   const newEmployee = {
-    firstName: employeeArray[0],
-    familyName: employeeArray[1],
-    title: employeeArray[2],
-    payPerHour: employeeArray[3],
+    firstName: employeeList[0],
+    familyName: employeeList[1],
+    title: employeeList[2],
+    payPerHour: employeeList[3],
     timeInEvents: [],
     timeOutEvents: [],
   }
