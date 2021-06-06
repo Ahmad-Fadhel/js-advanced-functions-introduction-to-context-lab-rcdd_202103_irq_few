@@ -1,5 +1,5 @@
 // Your code here
-function createEmployeeRecord(employeeList){
+const createEmployeeRecord = (employeeList) =>{
   const newEmployee = {
     firstName: employeeList[0],
     familyName: employeeList[1],
@@ -12,7 +12,7 @@ function createEmployeeRecord(employeeList){
   return newEmployee;
 }
 
-function createEmployeeRecords(recordArray){
+const createEmployeeRecords = (recordList) =>{
   let newEmployeeList = [];
   recordArray.forEach(record=>{
     newEmployeeList.push(createEmployeeRecord(record));
@@ -20,7 +20,7 @@ function createEmployeeRecords(recordArray){
   return newEmployeeList;
 }
 
-function createTimeInEvent(employeeRecord, date){
+const createTimeInEvent = (employeeRecord, date) =>{
   date = date.split(" ");
   let newTimeIn = {
     type: "TimeIn",
@@ -31,7 +31,7 @@ function createTimeInEvent(employeeRecord, date){
   return employeeRecord;
 }
 
-function createTimeOutEvent(employeeRecord, date){
+const createTimeOutEvent = (employeeRecord, date)=>{
   date = date.split(" ");
   let newTimeOut = {
     type: "TimeOut",
