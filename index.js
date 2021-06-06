@@ -14,7 +14,7 @@ const createEmployeeRecord = (employeeList) =>{
 
 const createEmployeeRecords = (recordList) =>{
   let newEmployeeList = [];
-  recordArray.forEach(record=>{
+  recordList.forEach(record=>{
     newEmployeeList.push(createEmployeeRecord(record));
   });
   return newEmployeeList;
