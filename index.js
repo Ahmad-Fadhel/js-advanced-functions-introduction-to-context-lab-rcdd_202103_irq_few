@@ -1,5 +1,5 @@
 // Your code here
-function createEmployeeRecord(employeeArray){
+function createEmployeeRecord(employeeList){
   const newEmployee = {
     firstName: employeeArray[0],
     familyName: employeeArray[1],
