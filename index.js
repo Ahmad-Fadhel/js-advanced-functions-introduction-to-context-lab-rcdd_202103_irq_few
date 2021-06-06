@@ -42,18 +42,18 @@ function createTimeOutEvent(employeeRecord, date){
   return employeeRecord;
 }
 
-function hoursWorkedOnDate(employeeRecord, date){
+const hoursWorkedOnDate = (employeeRecord, date) =>{
   const foundTimeOut = employeeRecord.timeOutEvents.find(timeOut => timeOut.date == date);
   const foundTimeIn = employeeRecord.timeInEvents.find(timeOut => timeOut.date == date);
   const workedHours = (foundTimeOut.hour - foundTimeIn.hour)/100;
   return workedHours;
 }
 
-function wagesEarnedOnDate(employeeRecord, date){
+const wagesEarnedOnDate = (employeeRecord, date) =>{
   return hoursWorkedOnDate(employeeRecord, date)*employeeRecord.payPerHour;
 }
 
-function allWagesFor(employeeRecord){
+const allWagesFor = (employeeRecord) => {
   let sumOfWages = 0;
   employeeRecord.timeInEvents.forEach(event=>{
     sumOfWages += wagesEarnedOnDate(employeeRecord, event.date);
@@ -61,13 +61,13 @@ function allWagesFor(employeeRecord){
   return sumOfWages;
 }
 
-function findEmployeeByFirstName(srcArray, firstName){
+const findEmployeeByFirstName =(srcArray, firstName) =>{
   return srcArray.find(employeeRecord => {
     if(employeeRecord.firstName == firstName) return true;
   })
 }
 
-function calculatePayroll(array){
+const calculatePayroll = (array) =>{
   let sumOfPay = 0;
   array.forEach(employeeRecord => {
     sumOfPay += allWagesFor(employeeRecord);
